@@ -1,0 +1,19 @@
+.main_layout {
+  width: 100%;
+  max-width: 1080px;
+  margin: 20px auto;
+}
+
+.main_title {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main_play_btn {
+  display: block;
+  margin: 0 auto;
+}
