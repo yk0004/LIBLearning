@@ -11,21 +11,18 @@ class Home extends React.Component {
     }
   }
 
-  componentDidMount(){
-    this.handleGetVoice();
-  }
-
   handleGetVoice = () => {
     let voices = synth.getVoices();
+    console.log(voices);
     this.setState({voices});
+    console.log("handle")
   }
 
-
   render () {
-    console.log(this.state.voices);
+
     return (
       <div>
-        <Main voices={this.state.voices}/>
+        <Main voices={this.state.voices} handleGetVoice={this.handleGetVoice}/>
         <div>test</div>
       </div>
     )
