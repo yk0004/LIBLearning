@@ -1,29 +1,24 @@
 import React from 'react';
 import Main from '../components/Main';
-const synth = window.speechSynthesis;
+import { VoicePlayer, VoiceRecognition } from 'react-voice-components';
 
 class Home extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      voices: []
+      voices: "Hello Miae, I love you"
     }
-  }
-
-  handleGetVoice = () => {
-    let voices = synth.getVoices();
-    console.log(voices);
-    this.setState({voices});
-    console.log("handle")
   }
 
   render () {
 
     return (
       <div>
-        <Main voices={this.state.voices} handleGetVoice={this.handleGetVoice}/>
-        <div>test</div>
+        <VoicePlayer
+   play
+   text="React voice player demonstration"
+ />
       </div>
     )
   }
